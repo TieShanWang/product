@@ -184,7 +184,7 @@ LOGGING = {
         'default': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': '/root/python/product/alpha/logs/django_all.log', #或者直接写路径：'c://logs/all.log',
+            'filename': '/root/python/source-alpha/product/logs/django_all.log', #或者直接写路径：'c://logs/all.log',
             'maxBytes': 1024*1024*5, # 5 MB
             'backupCount': 5,
             'formatter':'standard',
@@ -208,7 +208,7 @@ LOGGING = {
         'request_handler': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': '/root/python/product/alpha/logs/django_script.log',
+            'filename': '/root/python/source-alpha/product/logs/django_script.log',
             'maxBytes': 1024*1024*5, # 5 MB
             'backupCount': 5,
             'formatter':'standard',
