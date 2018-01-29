@@ -31,7 +31,7 @@ SECRET_KEY = 'up+3oyh@7l9819)f-0xitiw-9qsots)@#a(s%+!m_j((goo5%3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.29.130', '172.16.0.4', '111.230.129.181']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.29.130', '172.16.0.4', '111.230.129.181'， 'onety.cn']
 
 # media path
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files') # 此路径为文件的真实存储的路径
