@@ -1,0 +1,5 @@
+db.sqlite3
+.idea
+productManager/migrations
+statics
+*.pyc
