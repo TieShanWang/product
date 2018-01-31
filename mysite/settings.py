@@ -156,7 +156,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # 除了默认的 static 文件夹目录下，额外的所有路径，全路径
-STATICFILES_DIRS = []
+# STATICFILES_DIRS = []
 
 # 静态文件查找器
 # 默认设置是在 STATICFILES_DIRS (使用 django.contrib.staticfiles.finders.FileSystemFinder)
