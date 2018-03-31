@@ -50,7 +50,7 @@ class IOSTuTUModel(models.Model):
 @receiver(post_save, sender=IOSTuTUModel)
 def iostutumodel_after(**kwargs):
     instance = kwargs['instance']
-    p = MEDIA_ROOT_SF + '/ios.ipa'
+    p = MEDIA_ROOT_SF + '/meilibo.ipa'
     if (os.path.exists(p)):
         os.remove(p)
     shutil.copyfile(instance.path.path, p)
