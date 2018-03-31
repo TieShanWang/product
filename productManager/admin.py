@@ -9,6 +9,10 @@ from .MeasureUnit import MeasureUnit
 
 from .models import *
 
+import shutil
+
+import os
+
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
@@ -25,3 +29,13 @@ class MeasureUnitAdmin(admin.ModelAdmin):
     list_display = ['id', 'code', 'name']
 
 admin.site.register(MeasureUnit, MeasureUnitAdmin)
+
+class AndroidTuTuAdmin(admin.ModelAdmin):
+    list_display = ['id', 'path']
+
+admin.site.register(AndroidTuTUModel, AndroidTuTuAdmin)
+
+class IOSTuTuAdmin(admin.ModelAdmin):
+    list_display = ['id', 'path']
+
+admin.site.register(IOSTuTUModel, IOSTuTuAdmin)
