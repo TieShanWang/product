@@ -37,7 +37,7 @@ ALLOWED_HOSTS = ['t.onety.cn','127.0.0.1', '140.143.207.23', '172.21.0.12', 'loc
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files') # 此路径为文件的真实存储的路径
 MEDIA_URL = '/files/' # 此路径为浏览器上展示的URL的路径
 
-MEDIA_ROOT_SF = '/root/sf/tutu'
+MEDIA_ROOT_SF = '/root/sf'
 MEDIA_URL_SF = '/sf/'
 
 # Application definition
