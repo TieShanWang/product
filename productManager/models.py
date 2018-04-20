@@ -13,49 +13,6 @@ from mysite.settings import MEDIA_ROOT_SF
 
 import os, shutil
 
-def android_tutu_upload(a, b):
-    return 'tutulive_android_andoir.apk'
-
-class AndroidTuTUModel(models.Model):
-
-    class Meta:
-
-        verbose_name = '安卓兔兔直播包'
-
-        verbose_name_plural = '安卓兔兔直播包'
-
-    path = models.FileField(verbose_name='路径')
-
-@receiver(post_save, sender=AndroidTuTUModel)
-def androidtutumodel_after(**kwargs):
-    instance = kwargs['instance']
-    p = MEDIA_ROOT_SF + '/android.apk'
-    if (os.path.exists(p)):
-        os.remove(p)
-    shutil.copyfile(instance.path.path, p)
-
-def ios_tutu_upload(a, b):
-    return 'tutulive_ios_ios.ipa'
-
-class IOSTuTUModel(models.Model):
-
-    class Meta:
-
-        verbose_name = 'iOS兔兔直播包'
-
-        verbose_name_plural = 'iOS兔兔直播包'
-
-    path = models.FileField(verbose_name='路径')
-
-@receiver(post_save, sender=IOSTuTUModel)
-def iostutumodel_after(**kwargs):
-    instance = kwargs['instance']
-    p = MEDIA_ROOT_SF + '/meilibo.ipa'
-    if (os.path.exists(p)):
-        os.remove(p)
-    shutil.copyfile(instance.path.path, p)
-
-
 # 产品分类
 class ProductCategory(models.Model):
 
