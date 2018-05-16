@@ -1,5 +1,6 @@
 db.sqlite3
 .idea
+mini/migrations
 productManager/migrations
 statics
 *.pyc
