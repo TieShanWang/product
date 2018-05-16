@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'productManager',
+    'mini',
     'rest_framework',
     'rest_framework.authtoken',
 ]

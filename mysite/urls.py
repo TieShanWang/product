@@ -28,5 +28,6 @@ def root(request):
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^product/', include('productManager.urls', namespace='product')),
+    url(r'^mini/', include('mini.urls', namespace='mini')),
 	url(r'^$', root,),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.MEDIA_URL_SF, document_root=settings.MEDIA_ROOT_SF)
