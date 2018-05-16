@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
+
 from . import settings
 
 from django.shortcuts import render
@@ -25,6 +26,7 @@ def root(request):
     return render(request, 'productManager/root.html')
 
 urlpatterns = [
-	url(r'^', admin.site.urls),
     url(r'^admin/', admin.site.urls),
+    url(r'^product/', include('productManager.urls', namespace='product')),
+	url(r'^$', root,),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.MEDIA_URL_SF, document_root=settings.MEDIA_ROOT_SF)
