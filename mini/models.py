@@ -21,7 +21,7 @@ def mini_icon_path(instance, filename):
     nowtime = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
 
     # app group name
-    app_group_name = instance.product.mobile_application_group.type
+    app_group_name = instance.product.mobile_application_group
     logger.info("get ReactNative package icon image object in group:" + app_group_name)
 
     # cache path /group/mini/miniid/icon/time.jpg
@@ -48,7 +48,7 @@ def mini_package_file_path(instance, filename):
     nowtime = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
 
     # app group name
-    app_group_name = instance.product.mobile_application_group.type
+    app_group_name = instance.product.mobile_application_group
     logger.info("get ReactNative package upload file object in group:" + app_group_name)
 
     # cache path /group/mini/miniid/ios/time.zip
