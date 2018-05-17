@@ -237,7 +237,7 @@ def mini_version(request):
                 'version': packageModel.id,
                 'forceupdate': packageModel.forceupdate,
                 'description': packageModel.versiondesc,
-                'path': parse_to_url_http(packageModel.path.url),
+                'path': parse_to_url_https(packageModel.path.url),
                 # 'path': packageModel.get_binary_url(),
                 'fullupdate': packageModel.fullupdate,
             })
