@@ -8,11 +8,11 @@ from .models import MiniInfoModel, MiniPackageModel, MiniModel
 # Register your models here.
 
 class MiniModelAdmin(admin.ModelAdmin):
-    list_display = ['id', 'miniId', 'desc', 'mobile_application_group']
+    list_display = ['id', 'miniId', 'mobile_application_group']
 
     list_search = ['miniId']
 
-    fields = ['miniId', 'desc', 'mobile_application_group']
+    fields = ['miniId', 'mobile_application_group']
 
 
 admin.site.register(MiniModel, MiniModelAdmin)

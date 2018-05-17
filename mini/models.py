@@ -74,15 +74,12 @@ class MiniModel(models.Model):
                               verbose_name='小程序ID',
                               help_text='建议使用 bundle ID，长度不能超过30')
 
-    # 描述
-    desc = models.CharField(max_length=50, default='开发版本')
-
     mobile_application_group = models.CharField(max_length=20, default='mini', verbose_name='group', help_text='不需要修改')
     # mobile_application_group = models.ForeignKey(MobileApplicationGroup,
     #                                              related_name='mini_mobile_application_group')
 
     def __str__(self):
-        return self.desc
+        return self.miniId
 
 
 # 小程序信息模型
