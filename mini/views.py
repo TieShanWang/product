@@ -177,7 +177,7 @@ def mini_info(request):
     return res_with_success({
         'miniId': miniId,
         'name': infoModel.name,
-        'iconURL': parse_to_url_http(infoModel.icon.url),
+        'iconURL': parse_to_url_https(infoModel.icon.url),
         'version': infoModel.id
     })
 
