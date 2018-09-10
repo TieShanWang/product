@@ -26,8 +26,8 @@ def root(request):
     return render(request, 'productManager/root.html')
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^product/', include('productManager.urls', namespace='product')),
-    url(r'^mini/', include('mini.urls', namespace='mini')),
-	url(r'^$', root,),
+    url(r'^mysite/admin/', admin.site.urls),
+    url(r'^mysite/product/', include('productManager.urls', namespace='product')),
+    url(r'^mysite/mini/', include('mini.urls', namespace='mini')),
+	url(r'^mysite/$', root,),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.MEDIA_URL_SF, document_root=settings.MEDIA_ROOT_SF)
